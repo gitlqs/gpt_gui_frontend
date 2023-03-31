@@ -150,55 +150,6 @@ class ChatFrame(wx.Frame):
         self.input_ctrl.Bind(wx.EVT_KEY_DOWN, self.on_input_key_down)
         load_chat_btn.Bind(wx.EVT_BUTTON, self.on_load_chat)
 
-        # super(ChatFrame, self).__init__(parent, title=title, size=(800, 800))
-        #
-        # self.current_chat_history_file_name = None
-        # self.renamed = False
-        #
-        # # create a panel
-        # panel = wx.Panel(self)
-        #
-        # # create a sizer to arrange the elements
-        # sizer = wx.BoxSizer(wx.VERTICAL)
-        #
-        # # create a text control to show the chat history
-        # self.history_ctrl = wx.html2.WebView.New(panel, backend=wx.html2.WebViewBackendEdge)
-        # sizer.Add(self.history_ctrl, proportion=1, flag=wx.EXPAND | wx.ALL, border=5)
-        #
-        # # create a text control for the user input
-        # self.input_ctrl = wx.TextCtrl(panel, style=wx.TE_MULTILINE)
-        # font = wx.Font(16, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
-        # self.input_ctrl.SetFont(font)
-        # sizer.Add(self.input_ctrl, proportion=0, flag=wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, border=5)
-        #
-        # # create a horizontal sizer for the chat input
-        # input_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        #
-        # # create a button to create a new chat
-        # new_chat_btn = wx.Button(panel, label='New Chat')
-        # input_sizer.Add(new_chat_btn, flag=wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.RIGHT, border=5)
-        #
-        # # create a button to load chat history
-        # load_chat_btn = wx.Button(panel, label='Load')
-        # input_sizer.Add(load_chat_btn, flag=wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.RIGHT, border=5)
-        #
-        # # create a button to send the user input
-        # send_btn = wx.Button(panel, label='Send')
-        # input_sizer.Add(send_btn, flag=wx.ALIGN_CENTER_VERTICAL | wx.LEFT | wx.RIGHT, border=5)
-        #
-        # # add the input sizer to the main sizer
-        # sizer.Add(input_sizer, flag=wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, border=5)
-        #
-        # # set the main sizer for the panel
-        # panel.SetSizer(sizer)
-        #
-        # # bind events for the buttons
-        # new_chat_btn.Bind(wx.EVT_BUTTON, self.on_new_chat)
-        # send_btn.Bind(wx.EVT_BUTTON, self.on_send)
-        # self.input_ctrl.Bind(wx.EVT_KEY_DOWN, self.on_input_key_down)
-        # load_chat_btn.Bind(wx.EVT_BUTTON, self.on_load_chat)
-
-
     def on_load_chat(self, event):
         # save the current zoom level
         current_zoom_level = self.history_ctrl.GetZoom()
